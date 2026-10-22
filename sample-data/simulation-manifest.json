@@ -1,0 +1,9 @@
+[
+  {"file":"01-general-enrollment.pdf","title":"2027级新生报到通用说明","school":"启明大学（虚构）","campus":"全部校区","audience":"全体新生","publishedAt":"2026-10-01","validUntil":"2027-09-30","keywords":"报到,录取通知书,身份证,校园卡,材料"},
+  {"file":"02-east-undergraduate.pdf","title":"2027级东校区本科新生报到通知","school":"启明大学（虚构）","campus":"东校区","audience":"本科新生","publishedAt":"2026-10-01","validUntil":"2027-09-30","keywords":"东校区,本科,报到,综合服务中心"},
+  {"file":"03-west-graduate.pdf","title":"2027级西校区研究生报到通知","school":"启明大学（虚构）","campus":"西校区","audience":"研究生新生","publishedAt":"2026-10-01","validUntil":"2027-09-30","keywords":"西校区,研究生,报到,研究生服务楼"},
+  {"file":"04-east-housing.pdf","title":"2027级东校区住宿办理说明","school":"启明大学（虚构）","campus":"东校区","audience":"住宿生","publishedAt":"2026-10-01","validUntil":"2027-09-30","keywords":"住宿,宿舍,登记,松苑"},
+  {"file":"05-expired-payment.pdf","title":"2025级旧版收费方式通知","school":"启明大学（虚构）","campus":"全部校区","audience":"全体新生","publishedAt":"2025-08-01","validUntil":"2025-09-30","keywords":"收费方式,现金"},
+  {"file":"06-shuttle-v1.pdf","title":"2027级校园接驳通知","school":"启明大学（虚构）","campus":"东校区","audience":"本科新生","publishedAt":"2026-10-01","validUntil":"2027-09-30","keywords":"接驳,班车,红线"},
+  {"file":"07-shuttle-v2.pdf","title":"2027级校园接驳通知","school":"启明大学（虚构）","campus":"东校区","audience":"本科新生","publishedAt":"2026-10-02","validUntil":"2027-09-30","keywords":"接驳,班车,蓝线"}
+]

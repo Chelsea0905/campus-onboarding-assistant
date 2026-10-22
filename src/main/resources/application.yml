@@ -1,0 +1,89 @@
+spring:
+  application:
+    name: campus-onboarding-assistant
+  config:
+    import: optional:file:./secrets.properties
+  profiles:
+    active: local
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 3MB
+# 临时注释掉，便于大家开发调试和部署（实际填写 PgVector 数据库信息）
+#  datasource:
+#    url: xxx
+#    username: root
+#    password: 123456
+  ai:
+    dashscope:
+      # 需要替换为你自己的 key
+      api-key: ${DASHSCOPE_API_KEY:your-api-key}
+      chat:
+        options:
+          model: qwen-plus
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: gemma3:1b
+      embedding:
+        options:
+          model: ${CAMPUS_EMBEDDING_MODEL:nomic-embed-text}
+# 临时注释掉，便于大家开发调试和部署（实际需要启动 MCP 服务）
+#    mcp:
+#      client:
+#        sse:
+#          connections:
+#            server1:
+#              url: http://localhost:8127
+#        stdio:
+#          servers-configuration: classpath:mcp-servers.json
+# 临时注释掉，便于大家开发调试和部署（实际需要启动 PgVector 数据库）
+#    vectorstore:
+#      pgvector:
+#        index-type: HNSW
+#        dimensions: 1536
+#        distance-type: COSINE_DISTANCE
+#        max-document-batch-size: 10000 # Optional: Maximum number of documents per batch
+server:
+  port: 8123
+  address: ${CAMPUS_SERVER_ADDRESS:127.0.0.1}
+  servlet:
+    context-path: /api
+campus:
+  ai:
+    provider: ${CAMPUS_AI_PROVIDER:none}
+  vector:
+    enabled: ${CAMPUS_VECTOR_ENABLED:false}
+    min-similarity: ${CAMPUS_VECTOR_MIN_SIMILARITY:0.75}
+  admin-token: ${CAMPUS_ADMIN_TOKEN:}
+  deepseek:
+    api-key: ${DEEPSEEK_API_KEY:}
+    base-url: ${DEEPSEEK_BASE_URL:https://api.deepseek.com}
+    model: ${DEEPSEEK_MODEL:deepseek-flash}
+  storage:
+    path: ${CAMPUS_STORAGE_PATH:./tmp/campus-documents.json}
+# springdoc-openapi config
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.yupi.yuaiagent.controller
+# knife4j config
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+# searchAPI
+search-api:
+  # 需要替换为你自己的 key
+  api-key: 你的 API Key
+# 修改日志级别，查看 Spring AI 更多调用细节
+logging:
+  level:
+    org.springframework.ai: DEBUG

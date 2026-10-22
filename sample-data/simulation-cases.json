@@ -1,0 +1,28 @@
+{
+  "answerCases": [
+    {"id":"A01","q":"新生报到通用材料有哪些？","campus":"东校区","audience":"本科新生","expectedTitle":"2027级新生报到通用说明","contains":"录取通知书"},
+    {"id":"A02","q":"校园卡在哪里领取？","campus":"东校区","audience":"本科新生","expectedTitle":"2027级新生报到通用说明","contains":"迎新服务台"},
+    {"id":"A03","q":"东校区本科报到地点在哪里？","campus":"东校区","audience":"本科新生","expectedTitle":"2027级东校区本科新生报到通知","contains":"综合服务中心A厅"},
+    {"id":"A04","q":"东校区本科报到时间是什么时候？","campus":"东校区","audience":"本科新生","expectedTitle":"2027级东校区本科新生报到通知","contains":"2027年9月3日"},
+    {"id":"A05","q":"西校区研究生报到地点在哪里？","campus":"西校区","audience":"研究生新生","expectedTitle":"2027级西校区研究生报到通知","contains":"研究生服务楼B201"},
+    {"id":"A06","q":"西校区研究生报到时间是什么时候？","campus":"西校区","audience":"研究生新生","expectedTitle":"2027级西校区研究生报到通知","contains":"2027年9月4日"},
+    {"id":"A07","q":"东校区住宿登记地点在哪里？","campus":"东校区","audience":"住宿生","expectedTitle":"2027级东校区住宿办理说明","contains":"松苑宿舍一层服务台"},
+    {"id":"A08","q":"住宿生登记需要出示什么？","campus":"东校区","audience":"住宿生","expectedTitle":"2027级东校区住宿办理说明","contains":"居民身份证原件"},
+    {"id":"A09","q":"新版接驳走哪条路线？","campus":"东校区","audience":"本科新生","expectedTitle":"2027级校园接驳通知","contains":"蓝线"},
+    {"id":"A10","q":"班车几点发车？","campus":"东校区","audience":"本科新生","expectedTitle":"2027级校园接驳通知","contains":"07:30"},
+    {"id":"A11","q":"旧版红线接驳还开吗？","campus":"东校区","audience":"本科新生","expectedTitle":"2027级校园接驳通知","contains":"停止使用"}
+  ],
+  "refusalCases": [
+    {"id":"R01","q":"游泳池周六几点开放？","campus":"东校区","audience":"本科新生"},
+    {"id":"R02","q":"图书馆有多少个座位？","campus":"东校区","audience":"本科新生"},
+    {"id":"R03","q":"奖学金每年多少钱？","campus":"西校区","audience":"研究生新生"},
+    {"id":"R04","q":"旧版收费方式是什么？","campus":"东校区","audience":"本科新生"},
+    {"id":"R05","q":"东校区住宿登记在哪里？","campus":"西校区","audience":"住宿生"},
+    {"id":"R06","q":"研究生服务楼在哪里？","campus":"东校区","audience":"本科新生"}
+  ],
+  "checklistCases": [
+    {"id":"C01","campus":"东校区","audience":"本科新生","housing":true,"expectedTitles":["核对通用报到材料","领取校园卡","办理东校区本科报到","办理东校区住宿登记","乘坐新版蓝线接驳车"]},
+    {"id":"C02","campus":"东校区","audience":"本科新生","housing":false,"expectedTitles":["核对通用报到材料","领取校园卡","办理东校区本科报到","乘坐新版蓝线接驳车"]},
+    {"id":"C03","campus":"西校区","audience":"研究生新生","housing":false,"expectedTitles":["核对通用报到材料","领取校园卡","办理西校区研究生报到"]}
+  ]
+}
